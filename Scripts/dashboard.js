@@ -53,7 +53,7 @@ function getLabelStyles(label) {
     return { bg: 'bg-slate-100', text: 'text-slate-600' };
 }
 
-// Display Issues
+// Display all Issues
 function displayIssues(issues) {
     if (!issueContainer) return;
     issueContainer.innerHTML = "";
@@ -108,14 +108,14 @@ function displayIssues(issues) {
     });
 }
 
-// Single issue detail with Loading
+// sinle issue
 window.handleCardClick = function (id) {
     if (!id || id === 'undefined') return;
 
     const modal = document.getElementById('issue_modal');
     const modalContent = document.getElementById('modal-content');
 
-    // Show dots spinner in modal
+    // loading spinner modal
     modalContent.innerHTML = `
         <div class="flex justify-center py-20">
             <span class="loading loading-dots loading-xl text-[#00A96E]"></span>
