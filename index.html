@@ -7,10 +7,109 @@
     <title>Sign In</title>
     <link rel="stylesheet" href="./tailwindConnect.css">
     <link rel="shortcut icon" href="./assets/github-logo.png" type="image/x-icon">
+
+
+    <!-- font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- tailwind + daisy ui  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
+<body class="bg-[#F8FAFC] min-h-screen">
 
+    <!-- top part  -->
+    <div class="form py-20">
+        <div class="card bg-base-100 shadow w-full max-w-xl mx-auto rounded-lg">
+            <!-- logo  -->
+            <div class="w-[100px] mx-auto pt-8">
+                <img src="./assets/github-logo.png" alt="">
+            </div>
+            <!-- Title  -->
+            <div class="my-6">
+                <h2 class="text-[24px] font-semibold text-[#1F2937] text-center">
+                    GitHub Issues Tracker
+                </h2>
+                <p class="text-[#64748B] text-center">
+                    Sign in to manage your issues
+                </p>
+            </div>
+
+            <!-- login info  -->
+            <div class="card-body">
+                <fieldset class="fiedlset mx-8">
+
+                    <!-- username  -->
+                    <label for="username" class="label font-medium text-[#1F2937] text-xl mb-1">
+                        User Name
+                    </label>
+
+                    <input type="text" name="" id="user-input" class="input bg-white w-full outline-none rounded-lg"
+                        placeholder="Enter Username">
+                    <p class="text-[#4A00FF] text-[14px] mt-1 mb-4">
+                        Default: admin
+                    </p>
+
+                    <!-- password  -->
+                    <label for="password" class="label text-[#1F2937] text-xl font-medium mb-1">
+                        Password
+                    </label>
+
+                    <input type="password" name="pass" id="pass-input"
+                        class="input bg-white w-full outline-none rounded-lg" placeholder="Enter Password">
+
+                    <p class="text-[#4A00FF] text-[14px] mt-1 mb-4">
+                        Default: admin123
+                    </p>
+
+                    <button id="signIn-btn"
+                        class="btn btn-primary rounded-lg text-[16px] text-white font-semibold leading-4 w-full">
+                        Sign In
+                    </button>
+
+                    <!-- bottom part  -->
+                    <div class="flex items-center my-6">
+                        <div class="grow border-t border-[#E4E4E7]"></div>
+
+                        <span class="px-4 text-2xl text-[#1F2937]">
+                            Or
+                        </span>
+
+                        <div class="grow border-t border-[#E4E4E7]"></div>
+                    </div>
+                    <p class="text-[14px] text-[#64748B] text-center mb-2">
+                        Demo Credentials:
+                    </p>
+
+                    <div class="bg-[#F8FAFC] text-center py-6 px-[148px]">
+                        <h2>
+                            <span class="text-[16px] font-semibold text-[#1F2937]">
+                                Username:
+                            </span>
+                            admin
+                        </h2>
+                        <h2>
+                            <span class="text-[16px] font-semibold text-[#1F2937]">
+                                Password:
+                            </span>
+                            admin123
+                        </h2>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+
+    <script src="./Scripts/login.js"></script>
 </body>
 
 </html>
