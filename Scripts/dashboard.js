@@ -77,8 +77,9 @@ function displayIssues(issues) {
         const div = document.createElement('div');
         div.className = "h-full";
         div.innerHTML = `
-            <div class="card w-full h-full bg-white shadow-sm rounded-xl cursor-pointer hover:shadow-md transition-all border-t-4 ${borderColor} border-x border-b border-slate-100" 
-                  onclick="handleCardClick('${issueId}')">
+            <div class="card w-full h-full bg-white shadow-sm rounded-xl cursor-pointer hover:shadow-md transition-all border-x border-b border-slate-100" 
+     style="border-top: 5px solid ${isOpened ? '#00A96E' : '#A855F7'}; border-top-left-radius: 12px; border-top-right-radius: 12px;" 
+     onclick="handleCardClick('${issueId}')">
                 <div class="card-body p-6">
                     <div class="flex justify-between items-center mb-4">
                         <img src="${statusIcon}" alt="status" class="w-6 h-6">
